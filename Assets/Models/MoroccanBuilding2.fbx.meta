@@ -3,7 +3,42 @@ guid: dce34df66cc46bb40b05706ed53b7d18
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ConcreteBare
+    second: {fileID: 2800000, guid: fb8543a670f445740ab923e537333030, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Roof_tiles
+    second: {fileID: 2800000, guid: 80a8ca6ee8b65af4aa7ab3235cc340b0, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Shops_23
+    second: {fileID: 2800000, guid: 8215ff31d68fd944c8f703190739e8f3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Shops_24
+    second: {fileID: 2800000, guid: d21562c89174974408dc8082500fabc6, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Shops_25
+    second: {fileID: 2800000, guid: 1324b7c4a6445264c8c152836cb9c9e4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: brick_modern_05
+    second: {fileID: 2800000, guid: 21014c58468432b4a9ad97fe65523c80, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: building
+    second: {fileID: 2800000, guid: 25a1a951be4e3e149afd46a148d7b90a, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
