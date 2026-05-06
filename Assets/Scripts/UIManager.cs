@@ -59,4 +59,10 @@ public class UIManager : MonoBehaviour
         yield return new WaitForSeconds(duration);
         messagePanel.SetActive(false);
     }
+
+    public void ShowMessage(string message, float duration = 2f)
+{
+    StopAllCoroutines();
+    StartCoroutine(ShowMessageRoutine(message, duration));
+}
 }

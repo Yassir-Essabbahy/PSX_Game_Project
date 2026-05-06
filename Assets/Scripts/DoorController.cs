@@ -5,6 +5,7 @@ public class DoorController : MonoBehaviour
     [Header("Door Settings")]
     public float openAngle = 90f;
     public float smooth = 2f;
+    public bool isLocked;
 
     private bool isOpen = false;
 
@@ -31,6 +32,11 @@ public class DoorController : MonoBehaviour
 
     public void ToggleDoor()
     {
-        isOpen = !isOpen;
+    if (isLocked)
+    {
+        UIManager.instance.ShowMessage("Locked Door.");
+        return;
+    }
+    isOpen = !isOpen;
     }
 }

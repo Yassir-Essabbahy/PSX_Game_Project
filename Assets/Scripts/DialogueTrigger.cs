@@ -10,10 +10,20 @@ public class DialogueTrigger : MonoBehaviour
     void Update()
     {
         if (isActive && Input.GetKeyDown(KeyCode.E))
-            Talk();
+            NextLine();
     }
 
-    public void Talk()
+    public void Talk() // called by Interactable — starts dialogue only
+    {
+        if (isActive) return; // already open, do nothing
+        index = 0;
+        isActive = true;
+        PlayerInteract.isBlocked = true;
+        UIManager.instance.ShowDialogue(lines[index], speakerName);
+        index++;
+    }
+
+    void NextLine() // called by Update — advances dialogue
     {
         if (index >= lines.Length)
         {
@@ -24,8 +34,6 @@ public class DialogueTrigger : MonoBehaviour
             return;
         }
 
-        isActive = true;
-        PlayerInteract.isBlocked = true;
         UIManager.instance.ShowDialogue(lines[index], speakerName);
         index++;
     }

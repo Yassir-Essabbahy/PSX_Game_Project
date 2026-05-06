@@ -441,27 +441,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.005998478, y: 0.016935904, z: 0.009206269}
   m_Center: {x: 0.10624923, y: 0.0113797765, z: 0.0046031377}
---- !u!65 &109880000
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8839568719186477891}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.0017690882, y: 0.010123206, z: 0.019979997}
-  m_Center: {x: 0.07909493, y: 0.050025273, z: 0.009989998}
 --- !u!95 &124356969
 Animator:
   serializedVersion: 7
@@ -1139,6 +1118,54 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
+--- !u!1 &325311680
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 325311681}
+  - component: {fileID: 325311682}
+  m_Layer: 0
+  m_Name: DoorHinche
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &325311681
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325311680}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.0797, y: 0.04513, z: 0.0113}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2632240188118369925}
+  m_Father: {fileID: 3534916115966936106}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &325311682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325311680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55077e446c225f74483c77695d346f3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DoorController
+  openAngle: 90
+  smooth: 2
+  isLocked: 1
 --- !u!1 &325814628
 GameObject:
   m_ObjectHideFlags: 0
@@ -4950,6 +4977,63 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
+--- !u!1001 &1173517752
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 8d7d02c859dbf3345a8ca0ad6b03e859, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 95.72
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8d7d02c859dbf3345a8ca0ad6b03e859, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8.242
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8d7d02c859dbf3345a8ca0ad6b03e859, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 122.57
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8d7d02c859dbf3345a8ca0ad6b03e859, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8d7d02c859dbf3345a8ca0ad6b03e859, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8d7d02c859dbf3345a8ca0ad6b03e859, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.70710677
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8d7d02c859dbf3345a8ca0ad6b03e859, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.70710677
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8d7d02c859dbf3345a8ca0ad6b03e859, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8d7d02c859dbf3345a8ca0ad6b03e859, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8d7d02c859dbf3345a8ca0ad6b03e859, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8d7d02c859dbf3345a8ca0ad6b03e859, type: 3}
+      propertyPath: m_Name
+      value: Sb3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8d7d02c859dbf3345a8ca0ad6b03e859, type: 3}
 --- !u!1 &1196283383
 GameObject:
   m_ObjectHideFlags: 0
@@ -4997,6 +5081,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DoorController
   openAngle: 90
   smooth: 2
+  isLocked: 0
 --- !u!1 &1233543116
 GameObject:
   m_ObjectHideFlags: 0
@@ -5689,6 +5774,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DoorController
   openAngle: 90
   smooth: 2
+  isLocked: 0
 --- !u!1 &1399230514
 GameObject:
   m_ObjectHideFlags: 0
@@ -6431,6 +6517,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DoorController
   openAngle: 90
   smooth: 2
+  isLocked: 0
 --- !u!1 &1553473341
 GameObject:
   m_ObjectHideFlags: 0
@@ -7177,6 +7264,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DoorController
   openAngle: 90
   smooth: 2
+  isLocked: 0
 --- !u!1 &1742367325
 GameObject:
   m_ObjectHideFlags: 0
@@ -7611,6 +7699,88 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
+--- !u!1 &1774026473
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1774026474}
+  - component: {fileID: 1774026476}
+  - component: {fileID: 1774026475}
+  m_Layer: 3
+  m_Name: Colliduer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1774026474
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1774026473}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.09795, y: -0.37152, z: 0.48103}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8254716194182583758}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1774026475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1774026473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a585bcb8497e632418c106977b43fa39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Interactable
+  promptMessage: Press E
+  onInteract:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8254716194182583759}
+        m_TargetAssemblyTypeName: WindowController, Assembly-CSharp
+        m_MethodName: ToggleWindow
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!65 &1774026476
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1774026473}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.01394653, y: 0.00090934767, z: 0.009338152}
+  m_Center: {x: -0.001985475, y: 0.49279165, z: -0.46535048}
 --- !u!65 &1774583393
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7909,6 +8079,75 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: dce34df66cc46bb40b05706ed53b7d18, type: 3}
   m_PrefabInstance: {fileID: 1695862375}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1946668524
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: e7435403e73fcad43a4a7fca03666713, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 231.64064
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e7435403e73fcad43a4a7fca03666713, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 154.18379
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e7435403e73fcad43a4a7fca03666713, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 98.15
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e7435403e73fcad43a4a7fca03666713, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.49
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e7435403e73fcad43a4a7fca03666713, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 124.72
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e7435403e73fcad43a4a7fca03666713, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e7435403e73fcad43a4a7fca03666713, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071069
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e7435403e73fcad43a4a7fca03666713, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e7435403e73fcad43a4a7fca03666713, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e7435403e73fcad43a4a7fca03666713, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e7435403e73fcad43a4a7fca03666713, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e7435403e73fcad43a4a7fca03666713, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e7435403e73fcad43a4a7fca03666713, type: 3}
+      propertyPath: m_Name
+      value: Zarbiya
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e7435403e73fcad43a4a7fca03666713, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e7435403e73fcad43a4a7fca03666713, type: 3}
 --- !u!1 &1964299444
 GameObject:
   m_ObjectHideFlags: 0
@@ -8667,8 +8906,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.0015099198, y: 0.0887934, z: 0.030107016}
-  m_Center: {x: 0.07909711, y: 0.017707668, z: 0.014986717}
+  m_Size: {x: 0.001509924, y: 0.071441144, z: 0.030107021}
+  m_Center: {x: 0.07909711, y: 0.009031548, z: 0.014986717}
 --- !u!1 &2101299754
 GameObject:
   m_ObjectHideFlags: 0
@@ -11210,7 +11449,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
   lines:
   - Wash a bro
-  - Sir F7alk
+  - 7l Lbab
+  - Sed Lbab
+  - Sed Lbab
+  - 7l Serjm
+  - Sed Serjm
   speakerName: BABAK
 --- !u!114 &919132148691627603
 MonoBehaviour:
@@ -11224,7 +11467,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a585bcb8497e632418c106977b43fa39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Interactable
-  promptMessage: "\u0627\u0636\u063A\u0637 E"
+  promptMessage: Press E to Tallk
   onInteract:
     m_PersistentCalls:
       m_Calls:
@@ -13345,12 +13588,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3643511882460454206}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.0797, y: -0.04513, z: -0.0113}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3534916115966936106}
+  m_Father: {fileID: 325311681}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2674951467558952211
 GameObject:
@@ -14651,7 +14894,7 @@ Transform:
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2632240188118369925}
+  - {fileID: 325311681}
   m_Father: {fileID: 543450652364776195}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3534931688196758754
@@ -14741,12 +14984,14 @@ GameObject:
   - component: {fileID: 2632240188118369925}
   - component: {fileID: 7575358408948266153}
   - component: {fileID: 9177500705952954556}
-  m_Layer: 0
+  - component: {fileID: 9177500705952954558}
+  - component: {fileID: 9177500705952954559}
+  m_Layer: 3
   m_Name: Plane.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &3651096542513056909
 GameObject:
@@ -14955,12 +15200,13 @@ GameObject:
   - component: {fileID: 8254716194182583758}
   - component: {fileID: 4862749553524084716}
   - component: {fileID: 3432019168747498207}
+  - component: {fileID: 8254716194182583759}
   m_Layer: 0
   m_Name: wdw.006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!33 &3842060766520457208
 MeshFilter:
@@ -16753,13 +16999,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6348606211180106130}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0.7072302, z: 0.7069834, w: 0}
+  m_LocalPosition: {x: 13.2, y: -0.244, z: -18.498}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 543450652364776195}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -89.98, y: 180, z: 0}
 --- !u!33 &5332000491444804610
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -16816,7 +17062,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a585bcb8497e632418c106977b43fa39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Interactable
-  promptMessage: "\u0627\u0636\u063A\u0637 E"
+  promptMessage: Press E
   onInteract:
     m_PersistentCalls:
       m_Calls:
@@ -18385,6 +18631,7 @@ GameObject:
   - component: {fileID: 3024994380278461792}
   - component: {fileID: 1624854055151930425}
   - component: {fileID: 6244313605440625082}
+  - component: {fileID: 6244313605440625083}
   m_Layer: 3
   m_Name: Plane.002
   m_TagString: Untagged
@@ -18413,6 +18660,34 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.009027258, y: 0.00058969844, z: 0.019580398}
   m_Center: {x: 0.14268908, y: 0.038027883, z: 0.009790199}
+--- !u!114 &6244313605440625083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6244313605440625081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a585bcb8497e632418c106977b43fa39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Interactable
+  promptMessage: Press E
+  onInteract:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1730229393}
+        m_TargetAssemblyTypeName: DoorController, Assembly-CSharp
+        m_MethodName: ToggleDoor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &6280686681984484794
 Transform:
   m_ObjectHideFlags: 0
@@ -21048,9 +21323,26 @@ Transform:
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1774026474}
   m_Father: {fileID: 543450652364776195}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8254716194182583759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3786659788291817043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d54e6340b9df50438345ac9d394d74a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WindowController
+  slideDistance: 1
+  smooth: 2
+  isLocked: 0
+  lockedMessage: "\u0627\u0644\u0646\u0627\u0641\u0630\u0629 \u0645\u0633\u062F\u0648\u062F\u0629"
 --- !u!33 &8256243152771898208
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -21115,7 +21407,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a585bcb8497e632418c106977b43fa39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Interactable
-  promptMessage: "\u0627\u0636\u063A\u0637 E"
+  promptMessage: Press E
   onInteract:
     m_PersistentCalls:
       m_Calls:
@@ -22043,13 +22335,12 @@ GameObject:
   - component: {fileID: 3534916115966936106}
   - component: {fileID: 198261176031679985}
   - component: {fileID: 1312832692680258397}
-  - component: {fileID: 109880000}
   m_Layer: 0
   m_Name: Door3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!23 &8839853225212854182
 MeshRenderer:
@@ -22459,6 +22750,55 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &9177500705952954558
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3643511882460454206}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0014459275, y: 0.009361097, z: 0.019580398}
+  m_Center: {x: 0.07952301, y: 0.050197404, z: 0.009790207}
+--- !u!114 &9177500705952954559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3643511882460454206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a585bcb8497e632418c106977b43fa39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Interactable
+  promptMessage: Press E
+  onInteract:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 325311682}
+        m_TargetAssemblyTypeName: DoorController, Assembly-CSharp
+        m_MethodName: ToggleDoor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!33 &9208212742348772194
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -22492,3 +22832,5 @@ SceneRoots:
   - {fileID: 2145967182}
   - {fileID: 389652045}
   - {fileID: 401682979}
+  - {fileID: 1946668524}
+  - {fileID: 1173517752}
