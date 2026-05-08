@@ -5,7 +5,10 @@ using System.Collections;
 [System.Serializable]
 public class DialogueStep
 {
+    public string speakerName;
+    [TextArea(2, 5)]
     public string line;
+
     public AudioClip voiceClip;
     public string animationTrigger;
     public AudioClip jumpscareSound;
@@ -26,7 +29,7 @@ public class StoreNPCDialogue : MonoBehaviour
 
     private int index = 0;
     private bool isActive = false;
-    private bool hasTalked = false; // <- NEW
+    private bool hasTalked = false;
 
     void Update()
     {
@@ -38,7 +41,7 @@ public class StoreNPCDialogue : MonoBehaviour
 
     public void StartConversation()
     {
-        // Prevent talking again forever
+        // Prevent talking more than once
         if (isActive || hasTalked)
             return;
 
@@ -49,13 +52,19 @@ public class StoreNPCDialogue : MonoBehaviour
 
         PlayerInteract.isBlocked = true;
 
-        // Disable interactable forever
+        // Disable interactable
         Interactable interactable = GetComponent<Interactable>();
         if (interactable != null)
+        {
             interactable.enabled = false;
+        }
 
-        PlayStep(steps[index]);
-        index++;
+        // Start first dialogue
+        if (steps.Length > 0)
+        {
+            PlayStep(steps[index]);
+            index++;
+        }
     }
 
     void NextStep()
@@ -72,22 +81,26 @@ public class StoreNPCDialogue : MonoBehaviour
 
     void PlayStep(DialogueStep step)
     {
+        // Show dialogue
         if (!string.IsNullOrEmpty(step.line))
         {
-            UIManager.instance.ShowDialogue(step.line, "صاحب الحانوت");
+            UIManager.instance.ShowDialogue(step.line, step.speakerName);
         }
 
+        // Play voice
         if (step.voiceClip != null)
         {
             voiceSource.Stop();
             voiceSource.PlayOneShot(step.voiceClip);
         }
 
+        // Play animation
         if (!string.IsNullOrEmpty(step.animationTrigger) && npcAnimator != null)
         {
             npcAnimator.SetTrigger(step.animationTrigger);
         }
 
+        // Play jumpscare sound
         if (step.jumpscareSound != null)
         {
             jumpscareSource.PlayOneShot(step.jumpscareSound);
@@ -111,4 +124,4 @@ public class StoreNPCDialogue : MonoBehaviour
 
         SceneManager.LoadScene("HouseScene");
     }
-} 
+}

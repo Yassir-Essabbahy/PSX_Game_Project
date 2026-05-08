@@ -405,15 +405,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StoreNPCDialogue
   steps:
-  - line: 'Lahssen : Salam Weldi'
+  - speakerName: Lahssen
+    line: ' Salam Weldi'
     voiceClip: {fileID: 0}
     animationTrigger: 
     jumpscareSound: {fileID: 0}
-  - line: 'Lahssen : Kbrti'
+  - speakerName: Lahssen
+    line: Kbrti
     voiceClip: {fileID: 0}
     animationTrigger: Crouch
     jumpscareSound: {fileID: 0}
-  - line: 'Lahssen : Boo'
+  - speakerName: Lahssen
+    line: ' Boo'
     voiceClip: {fileID: 0}
     animationTrigger: HappyIdle
     jumpscareSound: {fileID: 8300000, guid: acb60dc383a7cec46b06366c0fbd6513, type: 3}
@@ -2223,7 +2226,7 @@ GameObject:
   - component: {fileID: 401144681}
   - component: {fileID: 401144680}
   m_Layer: 3
-  m_Name: Character_01
+  m_Name: StoreNPC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
