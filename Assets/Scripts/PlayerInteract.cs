@@ -5,51 +5,54 @@ public class PlayerInteract : MonoBehaviour
 {
     public float range = 2f;
     public GameObject promptUI;
-    public Camera playerCamera; // drag your Camera here in Inspector
-    private Interactable current;
+    public Camera playerCamera;
     public TextMeshProUGUI promptText;
-
     public static bool isBlocked = false;
+    private Interactable current;
 
     void Update()
     {
         if (isBlocked) return;
 
-
-        // shoot from camera center, not player feet
         Ray ray = playerCamera != null
             ? new Ray(playerCamera.transform.position, playerCamera.transform.forward)
             : new Ray(transform.position, transform.forward);
 
-        RaycastHit hit;
+        // debug always visible
+        Debug.DrawRay(ray.origin, ray.direction * range, Color.red);
 
-        if (Physics.Raycast(ray, out hit, range))
+        RaycastHit[] hits = Physics.RaycastAll(ray, range); // hits ALL colliders not just first
+
+        current = null;
+
+        foreach (RaycastHit hit in hits)
         {
-            current = hit.collider.GetComponent<Interactable>();
+            Interactable interactable = hit.collider.GetComponent<Interactable>();
+            if (interactable == null)
+                interactable = hit.collider.GetComponentInParent<Interactable>();
 
-            // also check parent in case collider is on a child object
-            if (current == null)
-                current = hit.collider.GetComponentInParent<Interactable>();
-
-            if (current != null)
+            if (interactable != null)
             {
-                
-                promptUI.SetActive(true);
-                promptText.text = current.promptMessage;
-
-                if (Input.GetKeyDown(KeyCode.E))
-                {
-
-                    current.Interact();
-
-                promptUI.SetActive(false);
-                }
-                return;
-
+                current = interactable;
+                break;
             }
         }
 
-        promptUI.SetActive(false);
-        current = null;
+        if (current != null)
+        {
+            promptUI.SetActive(true);
+            promptText.text = current.promptMessage;
+
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                current.Interact();
+                promptUI.SetActive(false);
+            }
+        }
+        else
+        {
+            promptUI.SetActive(false);
+            current = null;
+        }
     }
 }

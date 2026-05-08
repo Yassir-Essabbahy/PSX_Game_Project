@@ -49,16 +49,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\SampleScenes\Menu\Scripts\SceneAndURLLoader.cs" />
+    <Compile Include="Assets\Scripts\StoreScene\LimitedCameraLook1.cs" />
     <Compile Include="Assets\Scripts\WindowController.cs" />
     <Compile Include="Assets\Scripts\Interactable.cs" />
     <Compile Include="Assets\Scripts\UIManager.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\LevelReset.cs" />
     <Compile Include="Assets\Scripts\DoorController.cs" />
+    <Compile Include="Assets\Scripts\StoreScene\LimitedCameraLook.cs" />
     <Compile Include="Assets\Scripts\DialogueTrigger.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\PlaceTargetWithMouse.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\PlayerInteract.cs" />
+    <Compile Include="Assets\Scripts\StoreScene\StoreNPCDialogue.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\CameraSwitch.cs" />
