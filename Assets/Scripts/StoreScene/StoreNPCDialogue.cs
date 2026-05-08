@@ -124,4 +124,4 @@ public class StoreNPCDialogue : MonoBehaviour
 
         SceneManager.LoadScene("HouseScene");
     }
-}
+} 
