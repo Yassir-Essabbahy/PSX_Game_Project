@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 112}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 30756
+  controlID: 11059
   draggingID: 0
 --- !u!114 &2
 MonoBehaviour:
@@ -153,7 +153,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 112}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 30757
+  controlID: 11060
   draggingID: 0
 --- !u!114 &4
 MonoBehaviour:
@@ -179,7 +179,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 56}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 30851
+  controlID: 11172
   draggingID: 0
 --- !u!114 &5
 MonoBehaviour:
@@ -249,30 +249,31 @@ MonoBehaviour:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs:
-      - m_Data: 95072
+      - m_Data: 100614
       m_LastClickedID:
-        m_Data: 95072
+        m_Data: 100614
       m_ExpandedIDs:
-      - m_Data: -133264
-      - m_Data: -132682
-      - m_Data: -132658
-      - m_Data: -132084
-      - m_Data: -94082
-      - m_Data: -94058
-      - m_Data: -94030
-      - m_Data: -93434
-      - m_Data: -92466
-      - m_Data: -92290
-      - m_Data: -83646
+      - m_Data: -55774
+      - m_Data: -43130
+      - m_Data: -42248
+      - m_Data: -41572
+      - m_Data: -41404
+      - m_Data: -22082
+      - m_Data: -21452
+      - m_Data: -20856
+      - m_Data: -17272
+      - m_Data: -16706
+      - m_Data: -9872
+      - m_Data: -9870
+      - m_Data: -8980
+      - m_Data: -8806
+      - m_Data: -1606
       - m_Data: -1370
-      - m_Data: 54102
-      - m_Data: 54130
-      - m_Data: 54194
-      - m_Data: 54208
-      - m_Data: 54216
-      - m_Data: 54220
-      - m_Data: 81450
-      - m_Data: 95072
+      - m_Data: 61416
+      - m_Data: 62004
+      - m_Data: 68058
+      - m_Data: 68314
+      - m_Data: 68764
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1372,7 +1373,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
     m_DynamicPanelBehavior: 0
   m_WindowGUID: c5603b2ae0293c246a3f3df99320dee1
-  m_Gizmos: 1
+  m_Gizmos: 0
   m_OverrideSceneCullingMask: 6917529027641081856
   m_SceneIsLit: 1
   m_SceneLighting: 1
@@ -1382,9 +1383,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 94.48898, y: 6.341204, z: 122.82489}
+    m_Target: {x: 92.8723, y: 4.7363853, z: 115.66159}
     speed: 2
-    m_Value: {x: 94.48898, y: 6.341204, z: 122.82489}
+    m_Value: {x: 92.8723, y: 4.7363853, z: 115.66159}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1431,13 +1432,13 @@ MonoBehaviour:
     m_gridOpacity: 0.5
     m_NearestPlaneToHandleMode: 0
   m_Rotation:
-    m_Target: {x: 0.2877156, y: -0.438881, z: 0.14745499, w: 0.83971083}
+    m_Target: {x: 0.12778983, y: 0.87389475, z: -0.34854013, w: 0.3179002}
     speed: 2
-    m_Value: {x: 0.28990448, y: -0.4379418, z: 0.14860822, w: 0.8379009}
+    m_Value: {x: 0.13595295, y: 0.86391383, z: -0.3642472, w: 0.32014638}
   m_Size:
-    m_Target: 2.766631
+    m_Target: 2.188072
     speed: 2
-    m_Value: 2.766631
+    m_Value: 2.188072
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1673,7 +1674,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 3
     m_Folders:
-    - Assets/Prefabs
+    - Assets/Scenes
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1683,22 +1684,22 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 57
   m_LastFolders:
-  - Assets/Prefabs
+  - Assets/Scenes
   m_LastFoldersGridSize: 57
   m_LastProjectPath: C:\Users\USER\PSX_Game1
   m_LockTracker:
     m_IsLocked: 0
   m_LastLocalAssetsSearchArea: 3
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 159}
+    scrollPos: {x: 0, y: 207}
     m_SelectedIDs:
-    - m_Data: 55086
+    - m_Data: 57514
     m_LastClickedID:
-      m_Data: 55086
+      m_Data: 57514
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 54898
-    - m_Data: 55108
+    - m_Data: 57266
+    - m_Data: 57268
     - m_Data: 1000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1733,8 +1734,8 @@ MonoBehaviour:
       m_Data: 0
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 54898
-    - m_Data: 55108
+    - m_Data: 57266
+    - m_Data: 57268
     - m_Data: 1000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1764,10 +1765,10 @@ MonoBehaviour:
       m_ResourceFile: 
   m_ListAreaState:
     m_SelectedInstanceIDs:
-    - m_Data: 95072
+    - m_Data: 100614
     m_LastClickedEntityId:
-      m_Data: 95072
-    m_HadKeyboardFocusLastEvent: 1
+      m_Data: 100614
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs:
     - m_Data: 54770
     - m_Data: 45576

@@ -123,5 +123,5 @@ public class StoreNPCDialogue : MonoBehaviour
         yield return new WaitForSeconds(silenceBeforeReturn);
 
         SceneManager.LoadScene("HouseScene");
-    }
+    } 
 } 
