@@ -18,12 +18,15 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI messageText;
 
     [Header("Fade UI")]
-    public CanvasGroup fadeCanvasGroup;  // full-screen black Image with CanvasGroup
+    public CanvasGroup fadeCanvasGroup;
 
     [Header("Choice Panel UI")]
-    public GameObject choicePanel;       // parent panel that holds buttons
-    public Button[] choiceButtons;       // pre-made buttons (create 4-5 in Inspector)
-    public TextMeshProUGUI[] choiceButtonTexts; // TMP text on each button
+    public GameObject choicePanel;
+    public Button[] choiceButtons;
+    public TextMeshProUGUI[] choiceButtonTexts;
+
+    [Header("Player")]
+    public MonoBehaviour playerLookScript;
 
     private Action<int> onChoiceSelected;
 
@@ -45,7 +48,6 @@ public class UIManager : MonoBehaviour
         if (messagePanel) messagePanel.SetActive(false);
         if (choicePanel) choicePanel.SetActive(false);
 
-        // Start fully transparent (visible scene)
         if (fadeCanvasGroup)
         {
             fadeCanvasGroup.alpha = 0f;
@@ -115,17 +117,17 @@ public class UIManager : MonoBehaviour
         }
 
         fadeCanvasGroup.alpha = to;
-
-        // Only block raycasts when fully black
         fadeCanvasGroup.blocksRaycasts = (to >= 1f);
     }
 
+    // ═══════════════════════════════════════════
+    // CHOICE PANEL
+    // ═══════════════════════════════════════════
     public void ShowChoicePanel(string[] options, Action<int> callback)
     {
         onChoiceSelected = callback;
         choicePanel.SetActive(true);
 
-        // Show/hide buttons based on how many options
         for (int i = 0; i < choiceButtons.Length; i++)
         {
             if (i < options.Length)
@@ -133,8 +135,7 @@ public class UIManager : MonoBehaviour
                 choiceButtons[i].gameObject.SetActive(true);
                 choiceButtonTexts[i].text = options[i];
 
-                // Wire button click
-                int index = i; // capture for closure
+                int index = i;
                 choiceButtons[i].onClick.RemoveAllListeners();
                 choiceButtons[i].onClick.AddListener(() => OnChoiceButtonClicked(index));
             }
@@ -144,22 +145,22 @@ public class UIManager : MonoBehaviour
             }
         }
 
-        // Unlock cursor for clicking buttons
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+        if (playerLookScript) playerLookScript.enabled = false;
     }
 
     public void HideChoicePanel()
     {
         choicePanel.SetActive(false);
 
-        // Re-lock cursor for FPS gameplay
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        if (playerLookScript) playerLookScript.enabled = true;
     }
 
     private void OnChoiceButtonClicked(int index)
     {
         onChoiceSelected?.Invoke(index);
-    } 
+    }
 }

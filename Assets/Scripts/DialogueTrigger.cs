@@ -4,6 +4,7 @@ public class DialogueTrigger : MonoBehaviour
 {
     public string[] lines;
     public string speakerName;
+    public bool isMama = false; // check this on Mama's object in Inspector
     private int index = 0;
     private bool isActive = false;
 
@@ -13,24 +14,30 @@ public class DialogueTrigger : MonoBehaviour
             NextLine();
     }
 
-    public void Talk() // called by Interactable — starts dialogue only
+    public void Talk()
     {
-        if (isActive) return; // already open, do nothing
+        if (isActive) return;
         index = 0;
         isActive = true;
         PlayerInteract.isBlocked = true;
+        GetComponent<NPCLookAt>().StartLooking();
         UIManager.instance.ShowDialogue(lines[index], speakerName);
         index++;
     }
 
-    void NextLine() // called by Update — advances dialogue
+    void NextLine()
     {
         if (index >= lines.Length)
         {
             index = 0;
             isActive = false;
             PlayerInteract.isBlocked = false;
+            GetComponent<NPCLookAt>().StartLooking();
             UIManager.instance.HideDialogue();
+
+            if (isMama)
+                GameManager.instance.OnMamaTalked();
+
             return;
         }
 
