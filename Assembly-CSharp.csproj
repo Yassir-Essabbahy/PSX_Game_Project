@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\SampleScenes\Menu\Scripts\SceneAndURLLoader.cs" />
+    <Compile Include="Assets\Scripts\LocationChooser.cs" />
     <Compile Include="Assets\Scripts\StoreScene\LimitedCameraLook1.cs" />
     <Compile Include="Assets\Scripts\WindowController.cs" />
     <Compile Include="Assets\Scripts\Interactable.cs" />
