@@ -3,35 +3,34 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-
-    [Header("Phase")]
     public int phase = 0;
-
-    [Header("Objectives UI")]
     public ObjectiveUI objectiveUI;
 
     void Awake()
-    {
-        if (instance == null)
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-            return;
-        }
-    }
+{
+    instance = this;
 
-    void Start()
+    #if UNITY_EDITOR
+    if (!PlayerPrefs.HasKey("gameStarted"))
     {
-        SetPhase(phase);
+        PlayerPrefs.SetInt("phase", 0);
+        PlayerPrefs.SetInt("gameStarted", 1);
     }
+    #endif
+
+    phase = PlayerPrefs.GetInt("phase", 0);
+    SetPhase(phase);
+}
+
+void OnApplicationQuit()
+{
+    PlayerPrefs.DeleteKey("gameStarted");
+}
 
     public void SetPhase(int newPhase)
     {
         phase = newPhase;
+        PlayerPrefs.SetInt("phase", phase);
 
         switch (phase)
         {
@@ -44,28 +43,22 @@ public class GameManager : MonoBehaviour
     void SetupPhase0()
     {
         if (objectiveUI != null)
-            objectiveUI.SetObjective("Hdr m3a mama");
+            objectiveUI.SetObjective("t1");
     }
 
     void SetupPhase1()
     {
         if (objectiveUI != null)
-            objectiveUI.SetObjective("Sir L7anot");
+            objectiveUI.SetObjective("t2");
     }
 
-    void SetupPhase2() 
+    void SetupPhase2()
     {
         if (objectiveUI != null)
-            objectiveUI.SetObjective("شكون فالدار؟");
-
-        GameObject mama = GameObject.Find("Mama");
-        GameObject baba = GameObject.Find("Baba");
-
-        if (mama) mama.SetActive(false);
-        if (baba) baba.SetActive(false);
+            objectiveUI.SetObjective("t3");
     }
 
-    public void OnMamaTalked() 
+    public void OnMamaTalked()
     {
         if (phase != 0) return;
         SetPhase(1);

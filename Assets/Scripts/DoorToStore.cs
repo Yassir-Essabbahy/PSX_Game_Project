@@ -7,5 +7,5 @@ public class DoorToStore : MonoBehaviour
     {
         if (other.CompareTag("Player") && GameManager.instance.phase == 1)
             SceneManager.LoadScene("StoreScene");
-    }
+    } 
 }

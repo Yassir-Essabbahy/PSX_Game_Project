@@ -1564,6 +1564,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="ColbyO.VNTG.Editor.csproj" />
+    <ProjectReference Include="ColbyO.VNTG.csproj" />
   </ItemGroup>
   <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
   <ItemGroup>
