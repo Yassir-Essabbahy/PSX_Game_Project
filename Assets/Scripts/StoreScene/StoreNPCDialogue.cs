@@ -86,6 +86,6 @@ public class StoreNPCDialogue : MonoBehaviour
     IEnumerator ReturnToHouse()
     {
         yield return new WaitForSeconds(silenceBeforeReturn);
-        SceneManager.LoadScene("HouseScene3");
+        SceneManager.LoadScene("StoreWayBack");
     }
 }
