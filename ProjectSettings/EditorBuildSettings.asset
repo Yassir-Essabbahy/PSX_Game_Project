@@ -6,16 +6,19 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/HouseScene.unity
+    path: Assets/Scenes/GamePlay/HouseScene.unity
     guid: 810a266578e302e4aadbdc2700fcc50e
   - enabled: 1
-    path: Assets/Scenes/StoreScene.unity
+    path: Assets/Scenes/GamePlay/StoreWay.unity
+    guid: 469694a6cc463a64ead55a2f16df6401
+  - enabled: 1
+    path: Assets/Scenes/GamePlay/StoreScene.unity
     guid: 3c1f026620649f44ea43c61b0ab8b97b
   - enabled: 1
-    path: Assets/Scenes/HouseScene3.unity
+    path: Assets/Scenes/GamePlay/HouseBack.unity
     guid: 4eeaa23703cb5ef459f7923e8d268cef
   - enabled: 1
-    path: Assets/Scenes/HouseScene2.unity
-    guid: f8ab87dc32a191f40ac5cc01a603505a
+    path: Assets/Scenes/GamePlay/StoreWayBack.unity
+    guid: 143ee2d674f3c87438615965c0fbe60d
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}

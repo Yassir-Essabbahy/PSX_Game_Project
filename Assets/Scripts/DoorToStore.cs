@@ -37,6 +37,6 @@ public class DoorToStore : MonoBehaviour
         if (UIManager.instance != null && UIManager.instance.fadeCanvasGroup != null)
             yield return UIManager.instance.FadeOut(fadeDuration);
 
-        SceneManager.LoadScene("StoreScene");
+        SceneManager.LoadScene("StoreWay");
     }
 }

@@ -34,7 +34,7 @@ public class DoorController : MonoBehaviour
     {
     if (isLocked)
     {
-        UIManager.instance.ShowMessage("Locked Door.");
+        UIManager.instance.ShowMessage("Baba makay5linich nd5l hna");
         return;
     }
     isOpen = !isOpen;

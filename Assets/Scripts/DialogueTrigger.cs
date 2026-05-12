@@ -13,13 +13,8 @@ public class DialogueTrigger : MonoBehaviour
     [Header("Choice")]
     public bool hasChoice = false;
     public int choiceLineIndex = 2;
-    public GameObject choicePanel;
-    public Button choiceButtonA;
-    public Button choiceButtonB;
-    public TextMeshProUGUI choiceTextA;
-    public TextMeshProUGUI choiceTextB;
-    public string choiceA = "ايه ماما";
-    public string choiceB = "نعم ماما";
+    public string choiceA = "Ah";
+    public string choiceB = "La";
 
     [Header("Audio")]
     public AudioSource audioSource;
@@ -27,20 +22,10 @@ public class DialogueTrigger : MonoBehaviour
     private int index = 0;
     private bool isActive = false;
     private bool waitingForChoice = false;
-    private bool justStarted = false; // ← fix for line skip bug
-
-    void Start()
-    {
-        choicePanel.SetActive(false);
-        choiceButtonA.onClick.AddListener(() => OnChoiceMade());
-        choiceButtonB.onClick.AddListener(() => OnChoiceMade());
-        choiceTextA.text = choiceA;
-        choiceTextB.text = choiceB;
-    }
+    private bool justStarted = false;
 
     void Update()
     {
-        // Skip the same frame Talk() was called so E doesn't instantly advance
         if (justStarted)
         {
             justStarted = false;
@@ -56,8 +41,15 @@ public class DialogueTrigger : MonoBehaviour
         if (isActive) return;
         index = 0;
         isActive = true;
-        justStarted = true; // ← block E this frame
+        justStarted = true;
         PlayerInteract.isBlocked = true;
+
+        // Unlock cursor when dialogue starts
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        if (UIManager.instance.playerLookScript)
+            UIManager.instance.playerLookScript.enabled = false;
+
         GetComponent<NPCLookAt>().StartLooking();
         ShowLine(index);
         index++;
@@ -96,17 +88,14 @@ public class DialogueTrigger : MonoBehaviour
     void ShowChoices()
     {
         waitingForChoice = true;
-        choicePanel.SetActive(true);
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
+        // UIManager.ShowChoicePanel already handles cursor + playerLookScript
+        UIManager.instance.ShowChoicePanel(new string[] { choiceA, choiceB }, OnChoiceMade);
     }
 
-    void OnChoiceMade()
+    void OnChoiceMade(int choiceIndex)
     {
         waitingForChoice = false;
-        choicePanel.SetActive(false);
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        UIManager.instance.HideChoicePanel();
         NextLine();
     }
 
@@ -116,9 +105,16 @@ public class DialogueTrigger : MonoBehaviour
         isActive = false;
         waitingForChoice = false;
         PlayerInteract.isBlocked = false;
+
+        // Lock cursor back when dialogue ends
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        if (UIManager.instance.playerLookScript)
+            UIManager.instance.playerLookScript.enabled = true;
+
         GetComponent<NPCLookAt>().StopLooking();
         UIManager.instance.HideDialogue();
         if (isMama)
             GameManager.instance.OnMamaTalked();
     }
-}   
+}
