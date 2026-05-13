@@ -70,6 +70,13 @@ public class HidingSpot : MonoBehaviour
         yield return StartCoroutine(RotateDoors(false));
 
         PlayerInteract.isBlocked = false;
+
+            // Trigger ending if lights sequence is active
+    if (LightsTrigger.instance != null)
+        {
+            
+        LightsTrigger.instance.TriggerEndingEarly();
+        }
     }
 
     IEnumerator UnhideCabinet()

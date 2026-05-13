@@ -10,18 +10,32 @@ public class Radio : MonoBehaviour
     [Header("Settings")]
     public float staticDuration = 1f;
 
-    private AudioSource audioSource;
-    private int currentSongIndex = -1;
+    [Header("References")]
+    public AudioSource audioSource;
+
+    public static Radio instance;
+    private int currentSongIndex = 0;
     private bool isChanging = false;
 
     void Awake()
     {
-        audioSource = GetComponent<AudioSource>();
+        instance = this;
+    }
+
+    void Start()
+    {
     }
 
     public void Interact()
     {
         if (isChanging) return;
+
+        if (audioSource.isPlaying)
+        {
+            audioSource.Stop();
+            return;
+        }
+
         StartCoroutine(ChangeSong());
     }
 
@@ -29,7 +43,6 @@ public class Radio : MonoBehaviour
     {
         isChanging = true;
 
-        // Play static first
         if (staticSound != null)
         {
             audioSource.Stop();
@@ -37,10 +50,8 @@ public class Radio : MonoBehaviour
             yield return new WaitForSeconds(staticDuration);
         }
 
-        // Move to next song
         currentSongIndex = (currentSongIndex + 1) % songs.Length;
 
-        // Play song
         if (songs[currentSongIndex] != null)
         {
             audioSource.clip = songs[currentSongIndex];

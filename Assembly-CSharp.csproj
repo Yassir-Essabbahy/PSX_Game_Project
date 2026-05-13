@@ -75,6 +75,7 @@
     <Compile Include="Assets\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\CameraSwitch.cs" />
+    <Compile Include="Assets\Scripts\LightsTrigger.cs" />
     <Compile Include="Assets\Scripts\DoorToHome.cs" />
     <Compile Include="Assets\Scripts\Third\FllickerLight.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
