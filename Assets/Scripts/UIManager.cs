@@ -28,25 +28,31 @@ public class UIManager : MonoBehaviour
     [Header("Player")]
     public MonoBehaviour playerLookScript;
 
+    [Header("Typewriter")]
+    public float typewriterSpeed = 0.04f;
+
     private Action<int> onChoiceSelected;
+    private Coroutine typewriterCoroutine;
+    private DialogueTrigger currentTrigger;
 
     void Awake()
     {
         if (instance == null)
-        {
             instance = this;
-        }
         else
-        {
             Destroy(gameObject);
-        }
     }
 
     void Start()
     {
-        if (dialoguePanel) dialoguePanel.SetActive(false);
-        if (messagePanel) messagePanel.SetActive(false);
-        if (choicePanel) choicePanel.SetActive(false);
+        if (dialoguePanel)
+            dialoguePanel.SetActive(false);
+
+        if (messagePanel)
+            messagePanel.SetActive(false);
+
+        if (choicePanel)
+            choicePanel.SetActive(false);
 
         if (fadeCanvasGroup)
         {
@@ -55,44 +61,82 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    // ═══════════════════════════════════════════
+    // ═══════════════════════════════
     // DIALOGUE
-    // ═══════════════════════════════════════════
-    public void ShowDialogue(string line, string speaker)
+    // ═══════════════════════════════
+
+    public void ShowDialogue(string line, string speaker, DialogueTrigger trigger = null)
     {
+        currentTrigger = trigger;
+
         dialoguePanel.SetActive(true);
-        dialogueText.text = line;
+
         if (speakerName != null)
-        {
             speakerName.text = speaker;
+
+        if (typewriterCoroutine != null)
+            StopCoroutine(typewriterCoroutine);
+
+        typewriterCoroutine = StartCoroutine(TypewriterRoutine(line));
+    }
+
+    private IEnumerator TypewriterRoutine(string line)
+    {
+        dialogueText.text = "";
+
+        currentTrigger?.StartVoice();
+
+        foreach (char c in line)
+        {
+            dialogueText.text += c;
+
+            yield return new WaitForSeconds(typewriterSpeed);
         }
+
+        currentTrigger?.StopVoice();
+
+        typewriterCoroutine = null;
     }
 
     public void HideDialogue()
     {
+        if (typewriterCoroutine != null)
+        {
+            StopCoroutine(typewriterCoroutine);
+            typewriterCoroutine = null;
+        }
+
+        currentTrigger?.StopVoice();
+
         dialoguePanel.SetActive(false);
     }
 
-    // ═══════════════════════════════════════════
-    // MESSAGE (auto-hide)
-    // ═══════════════════════════════════════════
+    // ═══════════════════════════════
+    // MESSAGE
+    // ═══════════════════════════════
+
     public void ShowMessage(string message, float duration = 2f)
     {
         StopCoroutine(nameof(ShowMessageRoutine));
+
         StartCoroutine(ShowMessageRoutine(message, duration));
     }
 
     private IEnumerator ShowMessageRoutine(string message, float duration)
     {
         messagePanel.SetActive(true);
+
         messageText.text = message;
+
         yield return new WaitForSeconds(duration);
+
         messagePanel.SetActive(false);
     }
 
-    // ═══════════════════════════════════════════
-    // FADE (black screen)
-    // ═══════════════════════════════════════════
+    // ═══════════════════════════════
+    // FADE
+    // ═══════════════════════════════
+
     public Coroutine FadeOut(float duration)
     {
         return StartCoroutine(FadeRoutine(0f, 1f, duration));
@@ -106,26 +150,37 @@ public class UIManager : MonoBehaviour
     private IEnumerator FadeRoutine(float from, float to, float duration)
     {
         fadeCanvasGroup.blocksRaycasts = true;
+
         float elapsed = 0f;
+
         fadeCanvasGroup.alpha = from;
 
         while (elapsed < duration)
         {
             elapsed += Time.deltaTime;
-            fadeCanvasGroup.alpha = Mathf.Lerp(from, to, elapsed / duration);
+
+            fadeCanvasGroup.alpha = Mathf.Lerp(
+                from,
+                to,
+                elapsed / duration
+            );
+
             yield return null;
         }
 
         fadeCanvasGroup.alpha = to;
+
         fadeCanvasGroup.blocksRaycasts = (to >= 1f);
     }
 
-    // ═══════════════════════════════════════════
+    // ═══════════════════════════════
     // CHOICE PANEL
-    // ═══════════════════════════════════════════
+    // ═══════════════════════════════
+
     public void ShowChoicePanel(string[] options, Action<int> callback)
     {
         onChoiceSelected = callback;
+
         choicePanel.SetActive(true);
 
         for (int i = 0; i < choiceButtons.Length; i++)
@@ -133,11 +188,16 @@ public class UIManager : MonoBehaviour
             if (i < options.Length)
             {
                 choiceButtons[i].gameObject.SetActive(true);
+
                 choiceButtonTexts[i].text = options[i];
 
                 int index = i;
+
                 choiceButtons[i].onClick.RemoveAllListeners();
-                choiceButtons[i].onClick.AddListener(() => OnChoiceButtonClicked(index));
+
+                choiceButtons[i].onClick.AddListener(() =>
+                    OnChoiceButtonClicked(index)
+                );
             }
             else
             {
@@ -147,7 +207,9 @@ public class UIManager : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
-        if (playerLookScript) playerLookScript.enabled = false;
+
+        if (playerLookScript)
+            playerLookScript.enabled = false;
     }
 
     public void HideChoicePanel()
@@ -156,7 +218,9 @@ public class UIManager : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        if (playerLookScript) playerLookScript.enabled = true;
+
+        if (playerLookScript)
+            playerLookScript.enabled = true;
     }
 
     private void OnChoiceButtonClicked(int index)
