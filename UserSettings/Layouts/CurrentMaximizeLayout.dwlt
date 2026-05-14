@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 112}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 11395
+  controlID: 3574
   draggingID: 0
 --- !u!114 &2
 MonoBehaviour:
@@ -153,7 +153,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 112}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 11396
+  controlID: 3575
   draggingID: 0
 --- !u!114 &4
 MonoBehaviour:
@@ -179,7 +179,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 56}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 11511
+  controlID: 3674
   draggingID: 0
 --- !u!114 &5
 MonoBehaviour:
@@ -247,29 +247,18 @@ MonoBehaviour:
     m_DynamicPanelBehavior: 0
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 2307}
+      scrollPos: {x: 0, y: 1195}
       m_SelectedIDs:
-      - m_Data: -10638
+      - m_Data: -17836
       m_LastClickedID:
-        m_Data: -10638
+        m_Data: -17836
       m_ExpandedIDs:
-      - m_Data: -10638
-      - m_Data: -10530
+      - m_Data: -6634
+      - m_Data: -2752
+      - m_Data: -2498
       - m_Data: -1370
-      - m_Data: 59036
-      - m_Data: 59240
-      - m_Data: 59418
-      - m_Data: 59528
-      - m_Data: 59532
-      - m_Data: 59594
-      - m_Data: 59678
-      - m_Data: 59768
-      - m_Data: 60172
-      - m_Data: 60176
-      - m_Data: 60378
-      - m_Data: 60740
-      - m_Data: 60784
-      - m_Data: 61164
+      - m_Data: 55572
+      - m_Data: 56286
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -931,9 +920,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 89.923164, y: 7.554928, z: 117.84263}
+    m_Target: {x: 133.45052, y: 1.9646627, z: 111.007164}
     speed: 2
-    m_Value: {x: 89.923164, y: 7.554928, z: 117.84263}
+    m_Value: {x: 133.45052, y: 1.9646627, z: 111.007164}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -980,13 +969,13 @@ MonoBehaviour:
     m_gridOpacity: 0.5
     m_NearestPlaneToHandleMode: 0
   m_Rotation:
-    m_Target: {x: 0.017107746, y: -0.98246396, z: 0.11457616, w: 0.14640006}
+    m_Target: {x: 0.05203453, y: -0.37099117, z: 0.020902209, w: 0.9270138}
     speed: 2
-    m_Value: {x: 0.01671775, y: -0.9828097, z: 0.11312252, w: 0.14494503}
+    m_Value: {x: 0.05061005, y: -0.37238747, z: 0.02042015, w: 0.92647135}
   m_Size:
-    m_Target: 0.8120947
+    m_Target: 0.8868277
     speed: 2
-    m_Value: 0.8120947
+    m_Value: 0.8868277
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1097,7 +1086,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 3
     m_Folders:
-    - Assets/Sounds/Typing
+    - Assets/Models/Characters
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1107,23 +1096,23 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 57
   m_LastFolders:
-  - Assets/Sounds/Typing
+  - Assets/Models/Characters
   m_LastFoldersGridSize: 57
   m_LastProjectPath: C:\Users\USER\PSX_Game1
   m_LockTracker:
     m_IsLocked: 0
   m_LastLocalAssetsSearchArea: 3
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 227}
+    scrollPos: {x: 0, y: 159}
     m_SelectedIDs:
-    - m_Data: 128586
+    - m_Data: 55210
     m_LastClickedID:
-      m_Data: 128586
+      m_Data: 55210
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 58560
-    - m_Data: 58562
-    - m_Data: 58836
+    - m_Data: 55208
+    - m_Data: 55210
+    - m_Data: 55398
     - m_Data: 1000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1158,8 +1147,8 @@ MonoBehaviour:
       m_Data: 0
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 58560
-    - m_Data: 58562
+    - m_Data: 55208
+    - m_Data: 55210
     - m_Data: 1000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1189,10 +1178,10 @@ MonoBehaviour:
       m_ResourceFile: 
   m_ListAreaState:
     m_SelectedInstanceIDs:
-    - m_Data: -10638
+    - m_Data: -17836
     m_LastClickedEntityId:
-      m_Data: -10638
-    m_HadKeyboardFocusLastEvent: 1
+      m_Data: -17836
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs:
     - m_Data: 54770
     - m_Data: 45576
