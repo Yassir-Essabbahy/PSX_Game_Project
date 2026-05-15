@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 112}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 3574
+  controlID: 3753
   draggingID: 0
 --- !u!114 &2
 MonoBehaviour:
@@ -153,7 +153,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 112}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 3575
+  controlID: 3754
   draggingID: 0
 --- !u!114 &4
 MonoBehaviour:
@@ -179,7 +179,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 56}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 3674
+  controlID: 3811
   draggingID: 0
 --- !u!114 &5
 MonoBehaviour:
@@ -247,18 +247,15 @@ MonoBehaviour:
     m_DynamicPanelBehavior: 0
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 1195}
+      scrollPos: {x: 0, y: 59}
       m_SelectedIDs:
-      - m_Data: -17836
+      - m_Data: 56302
       m_LastClickedID:
-        m_Data: -17836
+        m_Data: 0
       m_ExpandedIDs:
-      - m_Data: -6634
-      - m_Data: -2752
-      - m_Data: -2498
+      - m_Data: -37912
+      - m_Data: -32544
       - m_Data: -1370
-      - m_Data: 55572
-      - m_Data: 56286
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -336,7 +333,7 @@ MonoBehaviour:
     x: 214
     y: 79
     width: 560
-    height: 270
+    height: 298
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -356,6 +353,7 @@ MonoBehaviour:
     - {fileID: -992771376153035809, guid: 819a9ef191e0fa1479e46479c21fcd71, type: 2}
     - {fileID: -688296586190712605, guid: a587ba7e6ae97e5499b1f6b31497ab41, type: 2}
     - {fileID: 2829713045626972413, guid: 79ba0402cf20d31459da4c9284db5f4a, type: 2}
+    - {fileID: 2829713045626972413, guid: f5f7fd94ad7680f4abae277cc10f9a6b, type: 2}
     m_ValueSerializationHelper:
     - e00: 0.6022433
       e01: 0
@@ -405,14 +403,30 @@ MonoBehaviour:
       e31: 0
       e32: 0
       e33: 1
-    - e00: 0.47966662
+    - e00: 0.33571428
       e01: 0
       e02: 0
-      e03: -140.7167
+      e03: -1.7857056
       e10: 0
-      e11: 0.47966662
+      e11: 0.33571428
       e12: 0
-      e13: 119.73003
+      e13: 112.71429
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    - e00: 0.33571428
+      e01: 0
+      e02: 0
+      e03: -1.7857208
+      e10: 0
+      e11: 0.33571428
+      e12: 0
+      e13: 112.71429
       e20: 0
       e21: 0
       e22: 1
@@ -422,9 +436,9 @@ MonoBehaviour:
       e32: 0
       e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: a587ba7e6ae97e5499b1f6b31497ab41, type: 2}
+  m_AnimatorController: {fileID: 9100000, guid: f5f7fd94ad7680f4abae277cc10f9a6b, type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: -688296586190712605, guid: a587ba7e6ae97e5499b1f6b31497ab41, type: 2}
+  - m_Target: {fileID: 2829713045626972413, guid: f5f7fd94ad7680f4abae277cc10f9a6b, type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
   stateMachineGraphGUI: {fileID: 0}
@@ -434,7 +448,7 @@ MonoBehaviour:
   m_MiniTool: 0
   m_LockTracker:
     m_IsLocked: 0
-  m_CurrentEditor: 0
+  m_CurrentEditor: 1
   m_LayerEditor:
     m_SelectedLayerIndex: 0
 --- !u!114 &9
@@ -910,7 +924,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
     m_DynamicPanelBehavior: 0
   m_WindowGUID: aaee16a776ebb944fafc2dbb62b3bbb6
-  m_Gizmos: 1
+  m_Gizmos: 0
   m_OverrideSceneCullingMask: 6917529027641081856
   m_SceneIsLit: 1
   m_SceneLighting: 1
@@ -920,9 +934,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 133.45052, y: 1.9646627, z: 111.007164}
+    m_Target: {x: 102.58534, y: 7.183504, z: 130.96358}
     speed: 2
-    m_Value: {x: 133.45052, y: 1.9646627, z: 111.007164}
+    m_Value: {x: 102.58534, y: 7.183504, z: 130.96358}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -969,9 +983,9 @@ MonoBehaviour:
     m_gridOpacity: 0.5
     m_NearestPlaneToHandleMode: 0
   m_Rotation:
-    m_Target: {x: 0.05203453, y: -0.37099117, z: 0.020902209, w: 0.9270138}
+    m_Target: {x: -0.13802607, y: -0.15033343, z: 0.021269558, w: -0.97880846}
     speed: 2
-    m_Value: {x: 0.05061005, y: -0.37238747, z: 0.02042015, w: 0.92647135}
+    m_Value: {x: -0.13802609, y: -0.15033345, z: 0.021269558, w: -0.9788085}
   m_Size:
     m_Target: 0.8868277
     speed: 2
@@ -1086,7 +1100,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 3
     m_Folders:
-    - Assets/Models/Characters
+    - Assets/Scenes/GamePlay
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1096,23 +1110,23 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 57
   m_LastFolders:
-  - Assets/Models/Characters
+  - Assets/Scenes/GamePlay
   m_LastFoldersGridSize: 57
   m_LastProjectPath: C:\Users\USER\PSX_Game1
   m_LockTracker:
     m_IsLocked: 0
   m_LastLocalAssetsSearchArea: 3
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 159}
+    scrollPos: {x: 0, y: 239}
     m_SelectedIDs:
-    - m_Data: 55210
+    - m_Data: 71512
     m_LastClickedID:
-      m_Data: 55210
+      m_Data: 71512
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 55208
-    - m_Data: 55210
-    - m_Data: 55398
+    - m_Data: 56266
+    - m_Data: 56268
+    - m_Data: 56494
     - m_Data: 1000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1147,8 +1161,8 @@ MonoBehaviour:
       m_Data: 0
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 55208
-    - m_Data: 55210
+    - m_Data: 56266
+    - m_Data: 56268
     - m_Data: 1000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1178,10 +1192,10 @@ MonoBehaviour:
       m_ResourceFile: 
   m_ListAreaState:
     m_SelectedInstanceIDs:
-    - m_Data: -17836
+    - m_Data: 56302
     m_LastClickedEntityId:
-      m_Data: -17836
-    m_HadKeyboardFocusLastEvent: 0
+      m_Data: 56302
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs:
     - m_Data: 54770
     - m_Data: 45576
@@ -1193,6 +1207,7 @@ MonoBehaviour:
     - m_Data: 109258
     - m_Data: 89900
     - m_Data: 243210
+    - m_Data: 57398
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
