@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 112}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 3753
+  controlID: 195
   draggingID: 0
 --- !u!114 &2
 MonoBehaviour:
@@ -153,7 +153,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 112}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 3754
+  controlID: 196
   draggingID: 0
 --- !u!114 &4
 MonoBehaviour:
@@ -179,7 +179,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 56}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 3811
+  controlID: 245
   draggingID: 0
 --- !u!114 &5
 MonoBehaviour:
@@ -247,15 +247,18 @@ MonoBehaviour:
     m_DynamicPanelBehavior: 0
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 59}
+      scrollPos: {x: 0, y: 683}
       m_SelectedIDs:
-      - m_Data: 56302
+      - m_Data: 59208
       m_LastClickedID:
-        m_Data: 0
+        m_Data: 59208
       m_ExpandedIDs:
-      - m_Data: -37912
-      - m_Data: -32544
+      - m_Data: -10688
       - m_Data: -1370
+      - m_Data: 59208
+      - m_Data: 59662
+      - m_Data: 60248
+      - m_Data: 61268
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -893,7 +896,7 @@ MonoBehaviour:
       sizeOverridden: 0
     m_ContainerData:
     - containerId: overlay-toolbar__top
-      scrollOffset: 0
+      scrollOffset: 432
     - containerId: overlay-toolbar__left
       scrollOffset: 0
     - containerId: overlay-dynamic-panel--left
@@ -924,7 +927,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
     m_DynamicPanelBehavior: 0
   m_WindowGUID: aaee16a776ebb944fafc2dbb62b3bbb6
-  m_Gizmos: 0
+  m_Gizmos: 1
   m_OverrideSceneCullingMask: 6917529027641081856
   m_SceneIsLit: 1
   m_SceneLighting: 1
@@ -934,9 +937,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 102.58534, y: 7.183504, z: 130.96358}
+    m_Target: {x: 93.007095, y: 7.2142, z: 123.38955}
     speed: 2
-    m_Value: {x: 102.58534, y: 7.183504, z: 130.96358}
+    m_Value: {x: 93.007095, y: 7.2142, z: 123.38955}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -983,13 +986,13 @@ MonoBehaviour:
     m_gridOpacity: 0.5
     m_NearestPlaneToHandleMode: 0
   m_Rotation:
-    m_Target: {x: -0.13802607, y: -0.15033343, z: 0.021269558, w: -0.97880846}
+    m_Target: {x: -0.0687448, y: 0.7208711, z: -0.07225516, w: -0.68586534}
     speed: 2
-    m_Value: {x: -0.13802609, y: -0.15033345, z: 0.021269558, w: -0.9788085}
+    m_Value: {x: -0.068635896, y: 0.7218944, z: -0.072357714, w: -0.6847788}
   m_Size:
-    m_Target: 0.8868277
+    m_Target: 2.138775
     speed: 2
-    m_Value: 0.8868277
+    m_Value: 2.138775
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1117,16 +1120,17 @@ MonoBehaviour:
     m_IsLocked: 0
   m_LastLocalAssetsSearchArea: 3
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 239}
+    scrollPos: {x: 0, y: 159}
     m_SelectedIDs:
-    - m_Data: 71512
+    - m_Data: 59040
     m_LastClickedID:
-      m_Data: 71512
+      m_Data: 59040
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 56266
-    - m_Data: 56268
-    - m_Data: 56494
+    - m_Data: 58584
+    - m_Data: 58586
+    - m_Data: 58842
+    - m_Data: 58850
     - m_Data: 1000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1161,8 +1165,8 @@ MonoBehaviour:
       m_Data: 0
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 56266
-    - m_Data: 56268
+    - m_Data: 58584
+    - m_Data: 58586
     - m_Data: 1000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1192,9 +1196,9 @@ MonoBehaviour:
       m_ResourceFile: 
   m_ListAreaState:
     m_SelectedInstanceIDs:
-    - m_Data: 56302
+    - m_Data: 59208
     m_LastClickedEntityId:
-      m_Data: 56302
+      m_Data: 59208
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs:
     - m_Data: 54770

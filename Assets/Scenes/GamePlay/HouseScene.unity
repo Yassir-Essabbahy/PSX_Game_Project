@@ -2290,10 +2290,10 @@ MonoBehaviour:
   openAngle: 90
   smooth: 2
   isLocked: 1
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 1650484128}
   openSound: {fileID: 0}
   closeSound: {fileID: 0}
-  lockedSound: {fileID: 0}
+  lockedSound: {fileID: 8300000, guid: 10327f44a62f4004ab3ba312f51fdd51, type: 3}
 --- !u!1 &325814628
 GameObject:
   m_ObjectHideFlags: 0
@@ -9320,8 +9320,8 @@ MonoBehaviour:
   smooth: 8
   isLocked: 0
   audioSource: {fileID: 1650484128}
-  openSound: {fileID: 8300000, guid: cfcc841c81c6fc34691d33cea1b531f9, type: 3}
-  closeSound: {fileID: 8300000, guid: 4bd74c34cbca0a647950ddfee8a35aa5, type: 3}
+  openSound: {fileID: 8300000, guid: 8124b662ca04c5a4893f7e3ddbe6f2c5, type: 3}
+  closeSound: {fileID: 8300000, guid: 8124b662ca04c5a4893f7e3ddbe6f2c5, type: 3}
   lockedSound: {fileID: 0}
 --- !u!1001 &1361501862
 PrefabInstance:
