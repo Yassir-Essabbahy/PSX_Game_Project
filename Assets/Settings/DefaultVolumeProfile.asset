@@ -214,7 +214,7 @@ MonoBehaviour:
   active: 1
   Enabled:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0
   ShowInSceneView:
     m_OverrideState: 1
     m_Value: 0
@@ -452,34 +452,34 @@ MonoBehaviour:
   active: 1
   Enabled:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   ShowInSceneView:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   PixelResolution:
     m_OverrideState: 1
-    m_Value: {x: 256, y: 256}
+    m_Value: {x: 512, y: 512}
   ColorPrecision:
     m_OverrideState: 1
-    m_Value: 32
+    m_Value: 55.2
   EnableDither:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   DitherMode:
     m_OverrideState: 1
-    m_Value: 2
+    m_Value: 1
   DitherPattern:
     m_OverrideState: 1
     m_Value: 1
   DitherPixelPerfect:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   DitherScale:
     m_OverrideState: 1
     m_Value: 0.5
   DitherThreshold:
     m_OverrideState: 1
-    m_Value: 0.1
+    m_Value: 1
   EnableFog:
     m_OverrideState: 1
     m_Value: 0
@@ -488,7 +488,7 @@ MonoBehaviour:
     m_Value: {r: 0, g: 0, b: 0, a: 1}
   FogDensity:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0.059
   FogNoiseStrength:
     m_OverrideState: 1
     m_Value: 0.1

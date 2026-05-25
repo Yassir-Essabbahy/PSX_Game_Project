@@ -44,19 +44,19 @@ void OnApplicationQuit()
     void SetupPhase0()
     {
         if (objectiveUI != null)
-            objectiveUI.SetObjective("t1");
+            objectiveUI.SetObjective("tklm");
     }
 
     void SetupPhase1()
     {
         if (objectiveUI != null)
-            objectiveUI.SetObjective("t2");
+            objectiveUI.SetObjective("sir l7anot");
     }
 
     void SetupPhase2()
     {
         if (objectiveUI != null)
-            objectiveUI.SetObjective("t3");
+            objectiveUI.SetObjective("rj3 ldar");
     }
 
     public void OnMamaTalked()
