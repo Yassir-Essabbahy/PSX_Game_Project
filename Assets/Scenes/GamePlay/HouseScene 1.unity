@@ -811,6 +811,10 @@ MonoBehaviour:
   openAngle: -90
   smooth: 2
   isLocked: 0
+  audioSource: {fileID: 0}
+  openSound: {fileID: 0}
+  closeSound: {fileID: 0}
+  lockedSound: {fileID: 0}
 --- !u!114 &119585500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2067,6 +2071,10 @@ MonoBehaviour:
   openAngle: 90
   smooth: 2
   isLocked: 1
+  audioSource: {fileID: 0}
+  openSound: {fileID: 0}
+  closeSound: {fileID: 0}
+  lockedSound: {fileID: 0}
 --- !u!1 &325814628
 GameObject:
   m_ObjectHideFlags: 0
@@ -2999,6 +3007,7 @@ MonoBehaviour:
   - {fileID: 1166748337}
   - {fileID: 391436363}
   playerLookScript: {fileID: 434151468}
+  typewriterSpeed: 0.04
 --- !u!4 &401682979
 Transform:
   m_ObjectHideFlags: 0
@@ -3840,8 +3849,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInteract
   range: 1
-  promptUI: {fileID: 2015627377}
   playerCamera: {fileID: 424925164}
+  crosshairFill: {fileID: 1887982499}
   promptText: {fileID: 155460253}
 --- !u!114 &435357068
 MonoBehaviour:
@@ -6389,6 +6398,81 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0015098751, y: 0.06427979, z: 0.030107016}
   m_Center: {x: 0.18999526, y: 0.0064189536, z: 0.014986717}
+--- !u!1 &988799167
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 988799168}
+  - component: {fileID: 988799170}
+  - component: {fileID: 988799169}
+  m_Layer: 5
+  m_Name: CorsshairFIll
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &988799168
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 988799167}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1887982497}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0.8999996}
+  m_SizeDelta: {x: -18.5334, y: -18.2806}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &988799169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 988799167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 3
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 0
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &988799170
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 988799167}
+  m_CullTransparentMesh: 1
 --- !u!1 &993961269
 GameObject:
   m_ObjectHideFlags: 0
@@ -8267,6 +8351,10 @@ MonoBehaviour:
   openAngle: 90
   smooth: 2
   isLocked: 0
+  audioSource: {fileID: 0}
+  openSound: {fileID: 0}
+  closeSound: {fileID: 0}
+  lockedSound: {fileID: 0}
 --- !u!4 &1203839039 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 12e91fcce946d3246a851e3fc23c7df4, type: 3}
@@ -9180,6 +9268,10 @@ MonoBehaviour:
   openAngle: 90
   smooth: 2
   isLocked: 0
+  audioSource: {fileID: 0}
+  openSound: {fileID: 0}
+  closeSound: {fileID: 0}
+  lockedSound: {fileID: 0}
 --- !u!1001 &1361501862
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10346,6 +10438,10 @@ MonoBehaviour:
   openAngle: 90
   smooth: 2
   isLocked: 0
+  audioSource: {fileID: 0}
+  openSound: {fileID: 0}
+  closeSound: {fileID: 0}
+  lockedSound: {fileID: 0}
 --- !u!1 &1541706783
 GameObject:
   m_ObjectHideFlags: 0
@@ -11445,6 +11541,10 @@ MonoBehaviour:
   openAngle: 90
   smooth: 2
   isLocked: 0
+  audioSource: {fileID: 0}
+  openSound: {fileID: 0}
+  closeSound: {fileID: 0}
+  lockedSound: {fileID: 0}
 --- !u!1001 &1732430820
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12422,6 +12522,82 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a67901cf8b47ddf41bea5078a90401e5, type: 3}
   m_PrefabInstance: {fileID: 833905473}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1887982496
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1887982497}
+  - component: {fileID: 1887982498}
+  - component: {fileID: 1887982499}
+  m_Layer: 5
+  m_Name: Corsshair
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1887982497
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1887982496}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 988799168}
+  m_Father: {fileID: 2145967182}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.000061035156, y: -3.1169891}
+  m_SizeDelta: {x: 34.8, y: 35.5426}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &1887982498
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1887982496}
+  m_CullTransparentMesh: 1
+--- !u!114 &1887982499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1887982496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.5176471}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 55bbf44304a1a7443b65fbd96c018df6, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!65 &1893518392
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14371,6 +14547,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1887982497}
   - {fileID: 2015627378}
   - {fileID: 1913720326}
   - {fileID: 1236323147}
@@ -16200,17 +16377,15 @@ MonoBehaviour:
   - '3ad f9ti...mmm '
   - Fik Jo3 ?
   - Sir Sir Chouf M3a Mok
-  voiceClips:
-  - {fileID: 8300000, guid: e5766687ae1d7cf43ae1a37f2deeaed1, type: 3}
-  - {fileID: 8300000, guid: 14e048c2954ceb24599999e4cbb31059, type: 3}
-  - {fileID: 8300000, guid: 4fd22ccb6323c0749b222a12962018d9, type: 3}
   speakerName: BABAK
   isMama: 1
   hasChoice: 1
   choiceLineIndex: 1
   choiceA: Ah.
   choiceB: La.
+  typingTrack: {fileID: 0}
   audioSource: {fileID: 69371584}
+  typingVolume: 0.8
 --- !u!114 &919132148691627603
 MonoBehaviour:
   m_ObjectHideFlags: 0

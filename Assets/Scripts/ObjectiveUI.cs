@@ -1,7 +1,7 @@
 using UnityEngine;
 using TMPro;
 
-public class ObjectiveUI : MonoBehaviour
+public class ObjectiveUI : MonoBehaviour 
 {
     public TextMeshProUGUI objectiveText;
 
