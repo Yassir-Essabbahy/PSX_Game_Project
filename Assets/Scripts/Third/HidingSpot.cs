@@ -65,29 +65,29 @@ public class HidingSpot : MonoBehaviour
     // ── CABINET ───────────────────────────────────────────
 
     IEnumerator HideCabinet()
+{
+    isHiding = true;
+    PlayerInteract.isBlocked = true;
+    playerController.enabled = false;
+
+    yield return StartCoroutine(RotateDoors(true));
+    yield return StartCoroutine(MoveCamera(hidingCameraPosition.position, hidingCameraPosition.rotation));
+    yield return StartCoroutine(RotateDoors(false));
+
+    PlayerInteract.isBlocked = false;
+
+    // ── switch to arms camera first ──
+    yield return StartCoroutine(Fade(0f, 1f, 0.8f));
+    Camera.main.enabled = false;
+    if (armsCamera) armsCamera.enabled = true;
+    yield return StartCoroutine(Fade(1f, 0f, 0.6f));
+
+    // ── THEN trigger ending ──
+    if (LightsTrigger.instance != null)
     {
-        isHiding = true;
-        PlayerInteract.isBlocked = true;
-        playerController.enabled = false;
-
-        yield return StartCoroutine(RotateDoors(true));
-        yield return StartCoroutine(MoveCamera(hidingCameraPosition.position, hidingCameraPosition.rotation));
-        yield return StartCoroutine(RotateDoors(false));
-
-        PlayerInteract.isBlocked = false;
-
-        // Trigger ending if lights sequence is active
-        if (LightsTrigger.instance != null)
-        {
-            LightsTrigger.instance.TriggerEndingEarly();
-        }
-
-        // ── switch to arms camera ──
-        yield return StartCoroutine(Fade(0f, 1f, 0.8f));
-        Camera.main.enabled = false;
-        if (armsCamera) armsCamera.enabled = true;
-        yield return StartCoroutine(Fade(1f, 0f, 0.6f));
+        LightsTrigger.instance.TriggerEndingEarly();
     }
+}
 
     IEnumerator UnhideCabinet()
     {
