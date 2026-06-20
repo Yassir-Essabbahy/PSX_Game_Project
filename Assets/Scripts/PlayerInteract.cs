@@ -5,7 +5,7 @@ using TMPro;
 public class PlayerInteract : MonoBehaviour
 {
     public float range = 2f;
-    public Camera playerCamera;
+    public Camera playerCamera; 
     public Image crosshairFill; // circular UI image, type = Filled
     public TextMeshProUGUI promptText;
     public static bool isBlocked = false;

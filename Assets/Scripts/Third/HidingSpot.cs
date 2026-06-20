@@ -19,6 +19,10 @@ public class HidingSpot : MonoBehaviour
     public float doorOpenAngle = 90f;
     public float doorSpeed = 3f;
 
+    [Header("Void Fall")]
+    public Camera armsCamera;
+    public CanvasGroup fadeOverlay;
+
     private bool isHiding = false;
     private Transform playerCamera;
 
@@ -28,6 +32,8 @@ public class HidingSpot : MonoBehaviour
     void Start()
     {
         playerCamera = Camera.main.transform;
+
+        if (armsCamera) armsCamera.enabled = false;
 
         if (leftDoor)
         {
@@ -39,7 +45,6 @@ public class HidingSpot : MonoBehaviour
         {
             rightClosed = rightDoor.localRotation;
             rightOpen = rightClosed * Quaternion.Euler(0, 0, -doorOpenAngle);
-
         }
     }
 
@@ -71,18 +76,29 @@ public class HidingSpot : MonoBehaviour
 
         PlayerInteract.isBlocked = false;
 
-            // Trigger ending if lights sequence is active
-    if (LightsTrigger.instance != null)
+        // Trigger ending if lights sequence is active
+        if (LightsTrigger.instance != null)
         {
-            
-        LightsTrigger.instance.TriggerEndingEarly();
+            LightsTrigger.instance.TriggerEndingEarly();
         }
+
+        // ── switch to arms camera ──
+        yield return StartCoroutine(Fade(0f, 1f, 0.8f));
+        Camera.main.enabled = false;
+        if (armsCamera) armsCamera.enabled = true;
+        yield return StartCoroutine(Fade(1f, 0f, 0.6f));
     }
 
     IEnumerator UnhideCabinet()
     {
         isHiding = false;
         PlayerInteract.isBlocked = true;
+
+        // ── switch back to main camera ──
+        yield return StartCoroutine(Fade(0f, 1f, 0.5f));
+        if (armsCamera) armsCamera.enabled = false;
+        Camera.main.enabled = true;
+        yield return StartCoroutine(Fade(1f, 0f, 0.5f));
 
         yield return StartCoroutine(RotateDoors(true));
 
@@ -93,6 +109,18 @@ public class HidingSpot : MonoBehaviour
 
         playerController.enabled = true;
         PlayerInteract.isBlocked = false;
+    }
+
+    IEnumerator Fade(float from, float to, float duration)
+    {
+        if (fadeOverlay == null) yield break;
+        float t = 0f;
+        while (t < 1f)
+        {
+            t += Time.deltaTime / duration;
+            fadeOverlay.alpha = Mathf.Lerp(from, to, t);
+            yield return null;
+        }
     }
 
     IEnumerator RotateDoors(bool open)
