@@ -27,6 +27,8 @@ public class StoreNPCDialogue : MonoBehaviour
     private int index = 0;
     private bool isActive = false;
 
+    private bool hasPlayed = false;
+
     void Update()
     {
         if (isActive && Input.GetKeyDown(KeyCode.E))
@@ -34,15 +36,17 @@ public class StoreNPCDialogue : MonoBehaviour
     }
 
     public void StartConversation()
-    {
-        if (isActive) return;
-        GetComponent<Interactable>().enabled = false;
-        index = 0;
-        isActive = true;
-        PlayerInteract.isBlocked = true;
-        PlayStep(steps[index]);
-        index++;
-    }
+{
+    if (isActive || hasPlayed) return;
+    hasPlayed = true;
+    
+    GetComponent<Interactable>().enabled = false;
+    index = 0;
+    isActive = true;
+    PlayerInteract.isBlocked = true;
+    PlayStep(steps[index]);
+    index++;
+}
 
     void NextStep()
     {
@@ -59,7 +63,7 @@ public class StoreNPCDialogue : MonoBehaviour
     void PlayStep(DialogueStep step)
     {
         if (!string.IsNullOrEmpty(step.line))
-            UIManager.instance.ShowDialogue(step.line, "صاحب الحانوت");
+            UIManager.instance.ShowDialogue(step.line, "El Hassan");
 
         if (step.voiceClip != null)
         {
@@ -88,4 +92,6 @@ public class StoreNPCDialogue : MonoBehaviour
         yield return new WaitForSeconds(silenceBeforeReturn);
         SceneManager.LoadScene("StoreWayBack");
     }
+
+
 }

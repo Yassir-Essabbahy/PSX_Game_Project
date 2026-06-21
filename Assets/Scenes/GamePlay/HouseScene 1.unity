@@ -659,7 +659,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.554
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -910,9 +910,9 @@ MonoBehaviour:
   openAngle: -90
   smooth: 2
   isLocked: 0
-  audioSource: {fileID: 0}
-  openSound: {fileID: 0}
-  closeSound: {fileID: 0}
+  audioSource: {fileID: 422595628}
+  openSound: {fileID: 8300000, guid: 40d12ad87d76cd043bdc8ea00e12f05b, type: 3}
+  closeSound: {fileID: 8300000, guid: 40d12ad87d76cd043bdc8ea00e12f05b, type: 3}
   lockedSound: {fileID: 0}
 --- !u!114 &119585500
 MonoBehaviour:
@@ -1169,7 +1169,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -298, y: 0}
   m_SizeDelta: {x: 629.584, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &155460253
@@ -2234,10 +2234,10 @@ MonoBehaviour:
   openAngle: 90
   smooth: 2
   isLocked: 1
-  audioSource: {fileID: 0}
-  openSound: {fileID: 0}
-  closeSound: {fileID: 0}
-  lockedSound: {fileID: 0}
+  audioSource: {fileID: 422595628}
+  openSound: {fileID: 8300000, guid: cfcc841c81c6fc34691d33cea1b531f9, type: 3}
+  closeSound: {fileID: 8300000, guid: 4bd74c34cbca0a647950ddfee8a35aa5, type: 3}
+  lockedSound: {fileID: 8300000, guid: 10327f44a62f4004ab3ba312f51fdd51, type: 3}
 --- !u!1 &325814628
 GameObject:
   m_ObjectHideFlags: 0
@@ -2772,15 +2772,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 26f0f09a692434145a7047605fd82461, type: 2}
+  m_sharedMaterial: {fileID: 714701234654622869, guid: 26f0f09a692434145a7047605fd82461, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0.7058824, g: 0.6627451, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2797,8 +2797,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 80
-  m_fontSizeBase: 80
+  m_fontSize: 51
+  m_fontSizeBase: 51
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3580,7 +3580,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.525
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -9231,9 +9231,9 @@ MonoBehaviour:
   openAngle: 90
   smooth: 2
   isLocked: 0
-  audioSource: {fileID: 0}
-  openSound: {fileID: 0}
-  closeSound: {fileID: 0}
+  audioSource: {fileID: 422595628}
+  openSound: {fileID: 8300000, guid: cfcc841c81c6fc34691d33cea1b531f9, type: 3}
+  closeSound: {fileID: 8300000, guid: 4bd74c34cbca0a647950ddfee8a35aa5, type: 3}
   lockedSound: {fileID: 0}
 --- !u!4 &1203839039 stripped
 Transform:
@@ -10027,7 +10027,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Radio
   songs:
-  - {fileID: 8300000, guid: 15b435388c178034086e23eac2f10994, type: 3}
+  - {fileID: 8300000, guid: f9226fc986c952944855bb20618faa25, type: 3}
   staticSound: {fileID: 0}
   staticDuration: 1
   audioSource: {fileID: 73490620}
@@ -10276,9 +10276,9 @@ MonoBehaviour:
   openAngle: 90
   smooth: 2
   isLocked: 0
-  audioSource: {fileID: 0}
-  openSound: {fileID: 0}
-  closeSound: {fileID: 0}
+  audioSource: {fileID: 422595628}
+  openSound: {fileID: 8300000, guid: cfcc841c81c6fc34691d33cea1b531f9, type: 3}
+  closeSound: {fileID: 8300000, guid: 4bd74c34cbca0a647950ddfee8a35aa5, type: 3}
   lockedSound: {fileID: 0}
 --- !u!1 &1355105487
 GameObject:
@@ -11574,9 +11574,9 @@ MonoBehaviour:
   openAngle: 90
   smooth: 2
   isLocked: 0
-  audioSource: {fileID: 0}
-  openSound: {fileID: 0}
-  closeSound: {fileID: 0}
+  audioSource: {fileID: 422595628}
+  openSound: {fileID: 8300000, guid: cfcc841c81c6fc34691d33cea1b531f9, type: 3}
+  closeSound: {fileID: 8300000, guid: 4bd74c34cbca0a647950ddfee8a35aa5, type: 3}
   lockedSound: {fileID: 0}
 --- !u!1 &1541706783
 GameObject:
@@ -12836,9 +12836,9 @@ MonoBehaviour:
   openAngle: 90
   smooth: 2
   isLocked: 0
-  audioSource: {fileID: 0}
-  openSound: {fileID: 0}
-  closeSound: {fileID: 0}
+  audioSource: {fileID: 422595628}
+  openSound: {fileID: 8300000, guid: cfcc841c81c6fc34691d33cea1b531f9, type: 3}
+  closeSound: {fileID: 8300000, guid: 4bd74c34cbca0a647950ddfee8a35aa5, type: 3}
   lockedSound: {fileID: 0}
 --- !u!1001 &1732430820
 PrefabInstance:
@@ -14607,11 +14607,11 @@ RectTransform:
   - {fileID: 155460252}
   m_Father: {fileID: 2145967182}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -0.00012207031, y: 0}
   m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 1, y: 0}
 --- !u!4 &2015751245 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 70e6613ba0d060a4ea6af09949990f27, type: 3}

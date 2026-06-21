@@ -11,6 +11,11 @@ public class PlayerInteract : MonoBehaviour
     public static bool isBlocked = false;
     private Interactable current;
 
+    void OnEnable()
+{
+    isBlocked = false;
+}
+
     void Update()
     {
         if (isBlocked)
