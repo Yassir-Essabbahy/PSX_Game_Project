@@ -13659,8 +13659,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
   lines:
-  - Salam
-  - cvvvvvvvvvvvvvvvvv
+  - Hadi w9ita dyal l3cha
+  - sir l7anot jib monada
+  - ghadi tl9a lfloss flmjer fl couzina
+  - ou mat3ltch....3ndak tri9
   speakerName: Mama
   isMama: 1
   hasChoice: 0
@@ -13682,7 +13684,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a585bcb8497e632418c106977b43fa39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Interactable
-  promptMessage: "\u0627\u0636\u063A\u0637 E"
+  promptMessage: Press E to Tallk
   onInteract:
     m_PersistentCalls:
       m_Calls:
@@ -17104,7 +17106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
   lines:
-  - '3ad f9ti...mmm '
+  - 3ad f9ti................
   - Fik Jo3 ?
   - Sir Sir Chouf M3a Mok
   speakerName: BABAK
@@ -19963,7 +19965,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a585bcb8497e632418c106977b43fa39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Interactable
-  promptMessage: "\u0627\u0636\u063A\u0637 E"
+  promptMessage: Press E
   onInteract:
     m_PersistentCalls:
       m_Calls:

@@ -12906,6 +12906,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 791522178870745594, guid: c6b44d07de2fe4b4ba2ce4ef3bb4640c, type: 3}
+      propertyPath: promptMessage
+      value: Press E
+      objectReference: {fileID: 0}
+    - target: {fileID: 791522178870745594, guid: c6b44d07de2fe4b4ba2ce4ef3bb4640c, type: 3}
       propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2007503586}
@@ -28823,7 +28827,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a585bcb8497e632418c106977b43fa39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Interactable
-  promptMessage: Brk E
+  promptMessage: Press E
   onInteract:
     m_PersistentCalls:
       m_Calls:
