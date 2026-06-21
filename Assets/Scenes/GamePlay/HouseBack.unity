@@ -1619,6 +1619,10 @@ MonoBehaviour:
   openAngle: 90
   smooth: 2
   isLocked: 1
+  audioSource: {fileID: 0}
+  openSound: {fileID: 0}
+  closeSound: {fileID: 0}
+  lockedSound: {fileID: 0}
 --- !u!1 &325814628
 GameObject:
   m_ObjectHideFlags: 0
@@ -2799,6 +2803,7 @@ MonoBehaviour:
   - {fileID: 393057126}
   - {fileID: 1013028564}
   playerLookScript: {fileID: 434151468}
+  typewriterSpeed: 0.04
 --- !u!4 &401682979
 Transform:
   m_ObjectHideFlags: 0
@@ -3437,8 +3442,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInteract
   range: 1
-  promptUI: {fileID: 2015627377}
   playerCamera: {fileID: 424925164}
+  crosshairFill: {fileID: 0}
   promptText: {fileID: 155460253}
 --- !u!114 &435357068
 MonoBehaviour:
@@ -7154,6 +7159,10 @@ MonoBehaviour:
   openAngle: 90
   smooth: 2
   isLocked: 0
+  audioSource: {fileID: 0}
+  openSound: {fileID: 0}
+  closeSound: {fileID: 0}
+  lockedSound: {fileID: 0}
 --- !u!4 &1224610584 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e7435403e73fcad43a4a7fca03666713, type: 3}
@@ -7852,6 +7861,10 @@ MonoBehaviour:
   openAngle: 90
   smooth: 2
   isLocked: 0
+  audioSource: {fileID: 0}
+  openSound: {fileID: 0}
+  closeSound: {fileID: 0}
+  lockedSound: {fileID: 0}
 --- !u!1 &1375079808
 GameObject:
   m_ObjectHideFlags: 0
@@ -8974,6 +8987,10 @@ MonoBehaviour:
   openAngle: 90
   smooth: 2
   isLocked: 0
+  audioSource: {fileID: 0}
+  openSound: {fileID: 0}
+  closeSound: {fileID: 0}
+  lockedSound: {fileID: 0}
 --- !u!1 &1534964409
 GameObject:
   m_ObjectHideFlags: 0
@@ -10280,6 +10297,10 @@ MonoBehaviour:
   openAngle: 90
   smooth: 2
   isLocked: 0
+  audioSource: {fileID: 0}
+  openSound: {fileID: 0}
+  closeSound: {fileID: 0}
+  lockedSound: {fileID: 0}
 --- !u!1 &1742367325
 GameObject:
   m_ObjectHideFlags: 0
@@ -11052,6 +11073,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   phase: 0
+  hasMoney: 0
   objectiveUI: {fileID: 647858662}
 --- !u!4 &1854662827
 Transform:
@@ -12930,6 +12952,7 @@ GameObject:
   - component: {fileID: 2145967181}
   - component: {fileID: 2145967180}
   - component: {fileID: 2145967179}
+  - component: {fileID: 2145967183}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -13026,6 +13049,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &2145967183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145967178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50d876872ef22814189ed3e33c03db4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SceneFadeIn
+  fadeOverlay: {fileID: 1672661422}
+  fadeDuration: 1
 --- !u!1 &9171099815452153
 GameObject:
   m_ObjectHideFlags: 0
@@ -14810,6 +14847,13 @@ MonoBehaviour:
   - Sed Serjm
   speakerName: BABAK
   isMama: 1
+  hasChoice: 0
+  choiceLineIndex: 2
+  choiceA: Ah
+  choiceB: La
+  typingTrack: {fileID: 0}
+  audioSource: {fileID: 0}
+  typingVolume: 0.8
 --- !u!114 &919132148691627603
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -24,4 +24,4 @@ public class SceneFadeIn : MonoBehaviour
         }
         fadeOverlay.alpha = 0f;
     }
-}
+} 

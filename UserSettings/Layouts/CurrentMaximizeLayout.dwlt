@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 112}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 21346
+  controlID: 24210
   draggingID: 0
 --- !u!114 &2
 MonoBehaviour:
@@ -153,7 +153,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 112}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 21347
+  controlID: 24211
   draggingID: 0
 --- !u!114 &4
 MonoBehaviour:
@@ -179,7 +179,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 56}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 21348
+  controlID: 24269
   draggingID: 0
 --- !u!114 &5
 MonoBehaviour:
@@ -247,12 +247,28 @@ MonoBehaviour:
     m_DynamicPanelBehavior: 0
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 9}
+      scrollPos: {x: 0, y: 0}
       m_SelectedIDs:
-      - m_Data: 128054
+      - m_Data: 55350
       m_LastClickedID:
-        m_Data: 128054
+        m_Data: 0
       m_ExpandedIDs:
+      - m_Data: -131850
+      - m_Data: -129236
+      - m_Data: -126018
+      - m_Data: -125814
+      - m_Data: -124484
+      - m_Data: -124092
+      - m_Data: -123474
+      - m_Data: -118012
+      - m_Data: -117438
+      - m_Data: -116688
+      - m_Data: -116044
+      - m_Data: -114646
+      - m_Data: -114316
+      - m_Data: -112878
+      - m_Data: -111416
+      - m_Data: -110004
       - m_Data: -100522
       - m_Data: -99184
       - m_Data: -92960
@@ -278,6 +294,13 @@ MonoBehaviour:
       - m_Data: 117200
       - m_Data: 117594
       - m_Data: 117756
+      - m_Data: 152508
+      - m_Data: 154008
+      - m_Data: 157540
+      - m_Data: 169544
+      - m_Data: 170912
+      - m_Data: 172206
+      - m_Data: 172354
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -990,9 +1013,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 91.49179, y: -0.07665211, z: 28.26016}
+    m_Target: {x: 113.04729, y: 3.9617722, z: 109.90612}
     speed: 2
-    m_Value: {x: 91.49179, y: -0.07665211, z: 28.26016}
+    m_Value: {x: 113.04729, y: 3.9617722, z: 109.90612}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1039,13 +1062,13 @@ MonoBehaviour:
     m_gridOpacity: 0.5
     m_NearestPlaneToHandleMode: 0
   m_Rotation:
-    m_Target: {x: -0.6061026, y: 0.1347566, z: -0.104446575, w: -0.7769526}
+    m_Target: {x: -0.060721308, y: 0.6871854, z: -0.05703585, w: -0.7217502}
     speed: 2
-    m_Value: {x: -0.6061025, y: 0.1347566, z: -0.10444657, w: -0.77695256}
+    m_Value: {x: -0.058718055, y: 0.6851546, z: -0.054795537, w: -0.7239563}
   m_Size:
-    m_Target: 13.618097
+    m_Target: 5.634667
     speed: 2
-    m_Value: 13.618097
+    m_Value: 5.634667
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1157,7 +1180,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 3
     m_Folders:
-    - Assets/Scripts
+    - Assets/Scenes/GamePlay
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1167,18 +1190,18 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 57
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Scenes/GamePlay
   m_LastFoldersGridSize: 57
   m_LastProjectPath: C:\Users\USER\PSX_Game1
   m_LockTracker:
     m_IsLocked: 0
   m_LastLocalAssetsSearchArea: 3
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 79}
+    scrollPos: {x: 0, y: 135}
     m_SelectedIDs:
-    - m_Data: 55306
+    - m_Data: 63344
     m_LastClickedID:
-      m_Data: 55306
+      m_Data: 63344
     m_ExpandedIDs:
     - m_Data: 0
     - m_Data: 55300
@@ -1252,10 +1275,10 @@ MonoBehaviour:
       m_ResourceFile: 
   m_ListAreaState:
     m_SelectedInstanceIDs:
-    - m_Data: 128054
+    - m_Data: 55350
     m_LastClickedEntityId:
-      m_Data: 128054
-    m_HadKeyboardFocusLastEvent: 0
+      m_Data: 55350
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs:
     - m_Data: 54770
     - m_Data: 45576
@@ -1378,7 +1401,7 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_LastSelectedObjectID:
-    m_Data: 128054
+    m_Data: 55340
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
