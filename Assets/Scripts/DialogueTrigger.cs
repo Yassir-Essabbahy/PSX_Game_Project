@@ -150,5 +150,8 @@ public class DialogueTrigger : MonoBehaviour
 
         if (isMama)
             GameManager.instance.OnMamaTalked();
+
+        DreamSequence seq = FindObjectOfType<DreamSequence>();
+        if (seq != null) seq.OnDialogueEnd();
     }
 }

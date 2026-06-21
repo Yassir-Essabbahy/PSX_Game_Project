@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\MessageTrigger.cs" />
+    <Compile Include="Assets\Scripts\WorldScripts\DreamSequence.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\SceneAndURLLoader.cs" />
     <Compile Include="Assets\Scripts\LocationChooser.cs" />
     <Compile Include="Assets\Scripts\StoreScene\LimitedCameraLook1.cs" />
@@ -80,6 +81,7 @@
     <Compile Include="Assets\Scripts\Third\FllickerLight.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\ParticleSceneControls.cs" />
+    <Compile Include="Assets\Scripts\SceneFadeIn.cs" />
     <Compile Include="Assets\Scripts\SceneLoader.cs" />
     <Compile Include="Assets\Scripts\CabinetDoorController.cs" />
   </ItemGroup>
