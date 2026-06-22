@@ -488,11 +488,16 @@ MonoBehaviour:
     voiceClip: {fileID: 8300000, guid: ab4e4611e6b56944db1c6ac5804dc97f, type: 3}
     animationTrigger: 
     jumpscareSound: {fileID: 0}
-  - line: W9ita dyal l3cha hadi yak, Coka kif l3ada
+  - line: Chno khassk ?.........Coka ?
     voiceClip: {fileID: 8300000, guid: ab4e4611e6b56944db1c6ac5804dc97f, type: 3}
     animationTrigger: Crouch
     jumpscareSound: {fileID: 0}
-  - line: hak yalah sir ldar, ou 3ndak bo3o 3rfti ou ychdk
+  - line: Hak hahya yalah l9iti kanstfhom ftelaja. Matnssach tgol lssi Mohamed 3la
+      dak credit rah 3tlo 3liya
+    voiceClip: {fileID: 8300000, guid: ab4e4611e6b56944db1c6ac5804dc97f, type: 3}
+    animationTrigger: HappyIdle
+    jumpscareSound: {fileID: 8300000, guid: acb60dc383a7cec46b06366c0fbd6513, type: 3}
+  - line: 
     voiceClip: {fileID: 8300000, guid: ab4e4611e6b56944db1c6ac5804dc97f, type: 3}
     animationTrigger: HappyIdle
     jumpscareSound: {fileID: 8300000, guid: acb60dc383a7cec46b06366c0fbd6513, type: 3}
