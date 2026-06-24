@@ -3402,9 +3402,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
   lines:
-  - '3ad f9ti...mmm '
-  - Fik Jo3 ?
-  - Sir Sir Chouf M3a Mok
+  - 3la slamtek mnin glsti m3ana f tbla
+  - '##################'
   speakerName: BABAK
   isMama: 0
   hasChoice: 0
@@ -3445,7 +3444,7 @@ Transform:
   m_GameObject: {fileID: 551406114}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 103.478, y: 6.574, z: 29.077}
+  m_LocalPosition: {x: 103.554, y: 6.574, z: 29.077}
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4337,6 +4336,10 @@ MonoBehaviour:
   npcsInOrder:
   - {fileID: 551406118}
   - {fileID: 1515969114}
+  fadeOverlay: {fileID: 763548585}
+  waitBeforeFade: 1
+  fadeDuration: 2
+  mainMenuScene: MainMenu
 --- !u!1 &698196411
 GameObject:
   m_ObjectHideFlags: 0
@@ -7225,7 +7228,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: aabba30a8e9ef294aa47c73102b0ea80, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 103.483
+      value: 103.559006
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aabba30a8e9ef294aa47c73102b0ea80, type: 3}
       propertyPath: m_LocalPosition.y
@@ -7982,7 +7985,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: aabba30a8e9ef294aa47c73102b0ea80, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 102.535
+      value: 102.406
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aabba30a8e9ef294aa47c73102b0ea80, type: 3}
       propertyPath: m_LocalPosition.y
@@ -9647,10 +9650,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
   lines:
-  - Salam
-  - cvvvvvvvvvvvvvvvvv
+  - Zid zid takol a wldi rah lmakla brdat
+  - ( MALK KHAYEF ? )
   speakerName: Mama
-  isMama: 1
+  isMama: 0
   hasChoice: 0
   choiceLineIndex: 2
   choiceA: Ah
@@ -10373,7 +10376,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9b60976c43580c348aee1e1067abf11a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 102.521
+      value: 102.392
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9b60976c43580c348aee1e1067abf11a, type: 3}
       propertyPath: m_LocalPosition.y

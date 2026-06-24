@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class DreamSequence : MonoBehaviour
@@ -6,9 +7,21 @@ public class DreamSequence : MonoBehaviour
     [Header("NPCs in order")]
     public DialogueTrigger[] npcsInOrder;
 
-    private int currentIndex = 0;
+    [Header("Ending")]
+    public CanvasGroup fadeOverlay;
+    public float waitBeforeFade = 1f;
+    public float fadeDuration = 2f;
+    public string mainMenuScene = "MainMenu";
 
-    // كتسميها من AnimationEvent فآخر frame
+    private int currentIndex = 0;
+    private bool endingTriggered = false;
+
+    void Start()
+{
+    Cursor.lockState = CursorLockMode.Locked;
+    Cursor.visible = false;
+}
+
     public void StartSequence()
     {
         currentIndex = 0;
@@ -21,11 +34,36 @@ public class DreamSequence : MonoBehaviour
         npcsInOrder[currentIndex].Talk();
     }
 
-    // كتسميها من كل DialogueTrigger إيلا خلص
     public void OnDialogueEnd()
     {
         currentIndex++;
         if (currentIndex < npcsInOrder.Length)
+        {
             TalkNext();
+        }
+        else
+        {
+            if (!endingTriggered)
+            {
+                endingTriggered = true;
+                StartCoroutine(FadeToMenu());
+            }
+        }
+    }
+
+    IEnumerator FadeToMenu()
+    {
+        yield return new WaitForSeconds(waitBeforeFade);
+
+        float t = 0f;
+        while (t < 1f)
+        {
+            t += Time.deltaTime / fadeDuration;
+            if (fadeOverlay != null)
+                fadeOverlay.alpha = Mathf.Lerp(0f, 1f, t);
+            yield return null;
+        }
+
+        SceneManager.LoadScene(mainMenuScene);
     }
 }

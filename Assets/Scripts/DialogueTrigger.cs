@@ -64,7 +64,6 @@ public class DialogueTrigger : MonoBehaviour
             return;
 
         hasSpoken = true;
-
         index = 0;
         isActive = true;
         justStarted = true;
@@ -95,7 +94,6 @@ public class DialogueTrigger : MonoBehaviour
         {
             ShowLine(index);
             index++;
-
             ShowChoices();
             return;
         }
@@ -112,9 +110,7 @@ public class DialogueTrigger : MonoBehaviour
     void ShowChoices()
     {
         waitingForChoice = true;
-
         StopVoice();
-
         UIManager.instance.ShowChoicePanel(
             new string[] { choiceA, choiceB },
             OnChoiceMade
@@ -124,9 +120,7 @@ public class DialogueTrigger : MonoBehaviour
     void OnChoiceMade(int choiceIndex)
     {
         waitingForChoice = false;
-
         UIManager.instance.HideChoicePanel();
-
         NextLine();
     }
 
