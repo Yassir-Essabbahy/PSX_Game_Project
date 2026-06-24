@@ -461,7 +461,7 @@ MonoBehaviour:
     m_Value: {x: 512, y: 512}
   ColorPrecision:
     m_OverrideState: 1
-    m_Value: 55.2
+    m_Value: 212.2
   EnableDither:
     m_OverrideState: 1
     m_Value: 1

@@ -3403,7 +3403,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
   lines:
   - 3la slamtek mnin glsti m3ana f tbla
-  - '##################'
+  - Wejd rasek ghda, rah tbib 3tani lwer9a nsjlek f lmedrassa
   speakerName: BABAK
   isMama: 0
   hasChoice: 0
@@ -9651,7 +9651,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
   lines:
   - Zid zid takol a wldi rah lmakla brdat
-  - ( MALK KHAYEF ? )
+  - Ma9ltich liya 9bila, chftek mkhlo3 yak bikhir ?
   speakerName: Mama
   isMama: 0
   hasChoice: 0
