@@ -7,22 +7,25 @@ public class GameManager : MonoBehaviour
     public bool hasMoney = false;
     public ObjectiveUI objectiveUI;
 
-    void Awake()
+void Awake()
 {
     instance = this;
 
+    // في الـ editor فقط: reset مرة واحدة
     #if UNITY_EDITOR
     if (!PlayerPrefs.HasKey("gameStarted"))
     {
         PlayerPrefs.SetInt("phase", 0);
         PlayerPrefs.SetInt("gameStarted", 1);
     }
+    #else
+    // في الـ build: دايما ابدا من 0
+    PlayerPrefs.SetInt("phase", 0);
     #endif
 
     phase = PlayerPrefs.GetInt("phase", 0);
     SetPhase(phase);
 }
-
 void OnApplicationQuit()
 {
     PlayerPrefs.DeleteKey("gameStarted");
